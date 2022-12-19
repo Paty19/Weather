@@ -1,0 +1,89 @@
+body {
+    background-image: url('https://images.unsplash.com/photo-1617399629487-81d9122fc382?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Njd8fHNlYSUyMHdpdGglMjBza3l8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    
+  }
+  
+  #container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  #header {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  #input {
+    color: white;
+    background-color: rgba(142, 127, 161, 0.3);
+    border-radius: 20px;
+    border: 3px solid rgb(39, 33, 33);
+    padding: 15px;
+    font-size: 20px;
+  }
+  
+  #input:focus {
+    background-color: rgba(80, 74, 87, 0.3);
+  }
+  
+  #when-where {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #city {
+    color: #FFF;
+    font-size: 45px;
+    font-weight: bold;
+  }
+  
+  #date {
+    color: #FFF;
+    font-size: 24px;
+  }
+  
+  #now {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  
+  #temperature {
+    color: #FFF;
+    font-size: 110px;
+    font-weight: bold;
+    text-shadow: 5px 10px black;
+    margin: 0;
+  }
+  
+  #feelsLike {
+    color: #FFF;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  #conditions {
+    color: #FFF;
+    font-size: 32px;
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  #variation {
+    color: #FFF;
+    font-size: 26px;
+    font-weight: bold;
+  }
+  .ten{
+    color: white;
+  }
