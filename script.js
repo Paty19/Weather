@@ -3,6 +3,16 @@ const api = {
     key: "e05dffc549cf5b6f6e4caa8b97682d01"
 }
 
+
+getApiGeolocation();
+
+async function getApiGeolocation() { 
+    const resGeolocation = await fetch(`https://ipgeolocation.abstractapi.com/v1/?api_key=b1195a0d717b4bb88763fce48faf455a`);
+    const resultGeolocation = await resGeolocation.json(); 
+    getInfo(resultGeolocation.city);
+}
+
+
 const input = document.querySelector("#input");
 input.addEventListener("keypress", enter);
 
@@ -16,7 +26,7 @@ async function getInfo (data) {
   const res = await fetch(`${api.endpoint}weather?q=${data}&units=metric&appID=${api.key}`);
   const result = await res.json();
   displayResult(result);
-  console.log(result);
+  input.value="";
 }
 
 function displayResult(result) {
@@ -50,8 +60,16 @@ function getOurDate() {
 
     let month = months[myDate.getMonth()];
 
-     let year = myDate.getFullYear();
+    let year = myDate.getFullYear();
 
-     let showDate = document.querySelector("#date");
-     showDate.textContent = `${day}` + " " + `${todayDate}` + " " + `${month}` + " " + `${year}` 
+    let showDate = document.querySelector("#date");
+    showDate.textContent = `${day}` + " " + `${todayDate}` + " " + `${month}` + " " + `${year}` 
 }
+
+gsap.from("#header", {y:-300, delay:0.2, duration:3, opacity:0.5, ease:"power4.out"});
+gsap.from("#city", {y:-300, delay:1.2, duration:3, opacity:0.5, ease:"power4.out"});
+gsap.from("#date", {y:-300, delay:2.2, duration:3, opacity:0, ease:"power4.out"});
+gsap.from("#temperature", {y:-300, delay:3.2, duration:3, opacity:0, ease:"power4.out"});
+gsap.from("#feelsLike", {y:300, delay:4.2, duration:3, opacity:0, ease:"power4.out"});
+gsap.from("#conditions", {y:300, delay:5.2, duration:3, opacity:0, ease:"power4.out"});
+gsap.from("#variation", {y:300, delay:6.2, duration:3, opacity:0, ease:"power4.out"});
